@@ -1,9 +1,9 @@
 <h2>AULAS</h2>
 
 <div>
-  <input #um type="text" [(ngModel)]="title" />
-  <input #dois type="text" [(ngModel)]="diaDaSemana" />
-  <input #tres type="text" [(ngModel)]="horario" />
+  <input #um type="text" [(ngModel)]="title" /> <br />
+  <input #dois type="text" [(ngModel)]="diaDaSemana" /><br />
+  <input #tres type="text" [(ngModel)]="horario" /><br />
   <button
     (click)="
       classes.add(um.value, dois.value, tres.value);
