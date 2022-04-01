@@ -1,0 +1,14 @@
+<h2>AULAS</h2>
+
+<div>
+  <input #input id="um" type="text" [(ngModel)]="title" />
+  <input #input id="um" type="text" [(ngModel)]="diaDaSemana" />
+  <input #input id="um" type="text" [(ngModel)]="horario" />
+  <button (click)="classes.add(um.value); input.value = ''">+</button>
+</div>
+<ul>
+  <li *ngFor="let classe of classes.getList(); index as i">
+    {{ task.title }}
+    <span (click)="classes.remove(i)" style="cursor: pointer">-</span>
+  </li>
+</ul>
