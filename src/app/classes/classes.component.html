@@ -5,7 +5,12 @@
   <input #dois type="text" [(ngModel)]="diaDaSemana" />
   <input #tres type="text" [(ngModel)]="horario" />
   <button
-    (click)="classes.add(um.value, dois.value, tres.value); um.value = ''"
+    (click)="
+      classes.add(um.value, dois.value, tres.value);
+      um.value = '';
+      dois.value = '';
+      tres.value = ''
+    "
   >
     +
   </button>
