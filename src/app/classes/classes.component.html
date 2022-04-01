@@ -1,9 +1,14 @@
 <h2>AULAS</h2>
 
 <div>
+  <p>Nome</p>
   <input #um type="text" [(ngModel)]="title" /> <br />
+
+  <p>Dia da Semana</p>
   <input #dois type="text" [(ngModel)]="diaDaSemana" /><br />
-  <input #tres type="text" [(ngModel)]="horario" /><br />
+
+  <p>Hora</p>
+  <input #tres type="text" [(ngModel)]="horario" />
   <button
     (click)="
       classes.add(um.value, dois.value, tres.value);
@@ -15,9 +20,24 @@
     +
   </button>
 </div>
-<ul>
-  <li *ngFor="let classe of classes.getList(); index as i">
-    {{ classe.title }}
-    <span (click)="classes.remove(i)" style="cursor: pointer">-</span>
-  </li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Dia da Semana</th>
+      <th>Horaria</th>
+      <th>Apagar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let classe of classes.getList(); index as i">
+      <td>{{ classe.title }}</td>
+      <td>{{ classe.diaDaSemana }}</td>
+      <td>{{ classe.horario }}</td>
+      <td>
+        <span (click)="classes.remove(i)" style="cursor: pointer">-</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
