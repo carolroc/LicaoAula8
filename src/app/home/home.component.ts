@@ -7,8 +7,10 @@ import { TimerService } from '../timer.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  inicio: any;
+
   constructor(public timer: TimerService) {
-    this.timer.start(1000);
+    this.timer.start(this.inicio);
   }
 
   ngOnInit() {}

@@ -4,15 +4,19 @@ import { Injectable } from '@angular/core';
 export class TimerService {
   private timer: any;
   private counter = 0;
+  private fim: any;
 
   constructor() {}
 
-  start(ms: number) {
+  start(inicio: number, fim: number) {
     if (!this.timer) {
       this.counter = 0;
       this.timer = setInterval(() => {
         this.counter++;
-      }, ms);
+        if (this.timer == fim) {
+          stop();
+        }
+      }, inicio);
     }
   }
 

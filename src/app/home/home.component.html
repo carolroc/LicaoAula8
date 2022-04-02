@@ -7,5 +7,10 @@
 <h3>TEMPORIZADOR</h3>
 {{ timer.getCount() }}s
 
-<button (click)="timer.start(1000)">Iniciar</button>
+<p>Intervalo</p>
+<input #inicio type="text" [(ngModel)]="inicio" />
+<input #fim type="text" [(ngModel)]="fim" />
+<button (click)="">+</button>
+
+<button (click)="timer.start(inicio.value, fim.value)">Iniciar</button>
 <button (click)="timer.stop()" style="cursor = pointer">Parar</button>
