@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ClassesService } from './classes.service';
 
 @Injectable()
 export class TimerService {
@@ -6,9 +7,10 @@ export class TimerService {
   private counter = 0;
   private fim: any;
 
-  constructor() {}
+  constructor(public classes: ClassesService) {}
 
   start(inicio: number) {
+    this.classes.add('', '', '');
     if (!this.timer) {
       this.counter = 0;
       this.timer = setInterval(() => {
