@@ -8,6 +8,7 @@ export class TimerService {
   private fim: any;
 
   constructor(public classes: ClassesService) {
+    this.start(1000);
     this.classes.add('Projeto de Encontrabilidade', 'Segunda', '19h');
     this.classes.add('Arquitetura Orientada a Serviços', 'Quarta', '19h');
     this.classes.add(
