@@ -8,6 +8,7 @@ import { TimerService } from '../timer.service';
 })
 export class HomeComponent implements OnInit {
   inicio: any;
+  fim: any;
 
   constructor(public timer: TimerService) {
     this.timer.start(this.inicio);

@@ -8,9 +8,9 @@
 {{ timer.getCount() }}s
 
 <p>Intervalo</p>
-<input #inicio type="text" [(ngModel)]="inicio" />
-<input #fim type="text" [(ngModel)]="fim" />
+<input #inicio type="time" [(ngModel)]="inicio" />
+<input #fim type="string" [(ngModel)]="fim" />
 <button (click)="">+</button>
 
-<button (click)="timer.start(inicio.value, fim.value)">Iniciar</button>
+<button (click)="timer.start(inicio.value)">Iniciar</button>
 <button (click)="timer.stop()" style="cursor = pointer">Parar</button>

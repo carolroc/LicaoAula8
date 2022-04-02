@@ -8,14 +8,11 @@ export class TimerService {
 
   constructor() {}
 
-  start(inicio: number, fim: number) {
+  start(inicio: number) {
     if (!this.timer) {
       this.counter = 0;
       this.timer = setInterval(() => {
         this.counter++;
-        if (this.timer == fim) {
-          stop();
-        }
       }, inicio);
     }
   }
