@@ -7,10 +7,17 @@ export class TimerService {
   private counter = 0;
   private fim: any;
 
-  constructor(public classes: ClassesService) {}
+  constructor(public classes: ClassesService) {
+    this.classes.add('Projeto de Encontrabilidade', 'Segunda', '19h');
+    this.classes.add('Arquitetura Orientada a Serviços', 'Quarta', '19h');
+    this.classes.add(
+      'Tópicos Especiais em Sistemas para Internet II',
+      'Sexta',
+      '19h'
+    );
+  }
 
   start(inicio: number) {
-    this.classes.add('', '', '');
     if (!this.timer) {
       this.counter = 0;
       this.timer = setInterval(() => {
